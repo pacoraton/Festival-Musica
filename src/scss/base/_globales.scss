@@ -1,0 +1,46 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family:$fuenteprincipal;
+    font-size: 1.6rem;
+}
+
+p{
+    font-size: 2rem;
+    color: $delgada;
+}
+
+
+.contenedor{
+    max-width: 100rem;
+    width: 95%; 
+    margin: 0 auto;
+
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: $delgada
+}
+
+h2{
+    font-size: 3.6rem;
+}
+
+h3{
+    font-size: 2.6rem;
+}
