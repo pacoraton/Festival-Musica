@@ -1,0 +1,20 @@
+.informacion{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $separacion;
+    margin-top: $separacion;
+
+    @include telefono{
+        display: block;
+    }
+
+    .fecha{
+        color: $rosa;
+        font-weight: $bold;
+    }
+
+    .info{
+        text-align: justify;
+        line-height: 1.5;
+    }
+}

@@ -31,12 +31,20 @@
             align-items: flex-start;//alinear a la izquierda
             color: $blanco;
             font-size: 7rem;
+            margin: 0 auto;
+            
+            @include telefono{
+                font-size: 3rem; 
+            }
 
 
             span{
                 background-color: $rosa;
                 font-size: 2rem;
                 padding: 1rem 2rem;
+                @include telefono{
+                    font-size: 1rem;
+                }
             }
         }
     }
