@@ -317,7 +317,7 @@ body {
 
 p {
   font-size: 2rem;
-  color: 300; }
+  color: #000000; }
 
 .contenedor {
   max-width: 100rem;
@@ -330,12 +330,77 @@ a {
 img {
   max-width: 100%; }
 
+h1, h2, h3 {
+  margin: 0; }
+
 h1 {
   font-size: 4rem;
-  font-weight: 300; }
+  font-weight: 900; }
 
 h2 {
   font-size: 3.6rem; }
 
 h3 {
   font-size: 2.6rem; }
+
+.header {
+  background-color: #4cb8b3; }
+  .header .contenido-header {
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 768px) {
+      .header .contenido-header {
+        display: block;
+        text-align: center; } }
+  .header h1 {
+    color: #ffffff; }
+    @media (max-width: 768px) {
+      .header h1 {
+        margin-bottom: 2rem; } }
+
+.navegacion-principal a {
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin-right: 2rem; }
+  .navegacion-principal a:hover {
+    color: #fef46d; }
+  .navegacion-principal a:last-of-type {
+    margin: 0; }
+
+.video {
+  position: relative;
+  max-height: 70rem;
+  overflow: hidden; }
+  .video .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#891c1e+0,9e37f2+64,ffffff+98&0.8+0,0.5+98 */
+    background: -moz-linear-gradient(-45deg, rgba(137, 28, 30, 0.8) 0%, rgba(158, 55, 242, 0.6) 64%, rgba(255, 255, 255, 0.5) 98%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(137, 28, 30, 0.8) 0%, rgba(158, 55, 242, 0.6) 64%, rgba(255, 255, 255, 0.5) 98%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(137, 28, 30, 0.8) 0%, rgba(158, 55, 242, 0.6) 64%, rgba(255, 255, 255, 0.5) 98%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc891c1e', endColorstr='#80ffffff',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */ }
+  .video .overlay-contenido {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 1; }
+    .video .overlay-contenido h2 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: #ffffff;
+      font-size: 7rem; }
+      .video .overlay-contenido h2 span {
+        background-color: #f53756;
+        font-size: 2rem;
+        padding: 1rem 2rem; }
+  .video video {
+    width: 100%; }

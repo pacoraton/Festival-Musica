@@ -14,9 +14,8 @@ body{
 
 p{
     font-size: 2rem;
-    color: $delgada;
+    color: $negro;
 }
-
 
 .contenedor{
     max-width: 100rem;
@@ -31,10 +30,12 @@ a{
 img{
     max-width: 100%;
 }
-
+h1,h2,h3{
+    margin: 0;
+}
 h1{
     font-size: 4rem;
-    font-weight: $delgada
+    font-weight: $black
 }
 
 h2{
