@@ -1,6 +1,9 @@
 const { series,src,dest,watch } = require('gulp');
 
 const sass = require('gulp-sass');
+const imagemin = require('gulp-imagemin');
+const notificacion = require('gulp-notify');
+const imagenwebp= require('gulp-webp');
 
 
 //Funcion que compila sass
@@ -20,12 +23,29 @@ const sass = require('gulp-sass');
     }
 
     function watchfile(){
-        watch('src/scss/**/*.scss',css)// * = La carpeta actual ------ ** = Todos los archivos con esa extensión
+        watch('src/scss/**/*.scss',css);// * = La carpeta actual ------ ** = Todos los archivos con esa extensión
     }
 
+    //disminuir image 
+    function imagenes(){
+        return src('src/img/**/*')
+                .pipe(imagemin())
+                .pipe(dest('./build/img'))
+                .pipe(notificacion({message:'Imagen Minificada'}));
+    }
+
+
+    //Convertir imagenes a webp
+    function Convertirwebp(){
+        return src('src/img/**/*')
+               .pipe(imagenwebp())
+               .pipe(dest('./build/img'))
+    }
 exports.css=css;
 exports.minificarcss=minificarcss;
 exports.watchfile=watchfile;
+exports.imagenes=imagenes;
+exports.Convertirwebp=Convertirwebp;
 
 
 
