@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr;
     column-gap: $separacion;
     margin-top: $separacion;
+    padding-bottom: $separacion;
 
     @include telefono{
         display: block;

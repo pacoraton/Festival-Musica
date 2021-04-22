@@ -416,7 +416,8 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 5rem;
-  margin-top: 5rem; }
+  margin-top: 5rem;
+  padding-bottom: 5rem; }
   @media (max-width: 560px) {
     .informacion {
       display: block; } }
@@ -426,3 +427,61 @@ h3 {
   .informacion .info {
     text-align: justify;
     line-height: 1.5; }
+
+h4, h3, .dia {
+  text-align: center;
+  color: #ffffff; }
+
+.line-up {
+  background-color: #f53756;
+  padding: 5rem 0; }
+  .line-up .escenarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem; }
+    @media (max-width: 560px) {
+      .line-up .escenarios {
+        display: block; } }
+  .line-up .escenario {
+    border: 1px solid; }
+
+.nombre_escenario {
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 300; }
+  .nombre_escenario:after {
+    content: '';
+    width: 20rem;
+    height: 10rem;
+    display: block;
+    margin: 2rem auto 0 auto;
+    background-size: 15rem;
+    background-repeat: no-repeat;
+    background-position: center center; }
+
+.calendario {
+  padding: 0;
+  list-style: none; }
+  .calendario li {
+    padding: 2.5rem;
+    font-weight: 700; }
+  .calendario span {
+    font-weight: 400; }
+
+.bg-amarillo .calendario li:nth-child(even) {
+  background-color: #fef03a; }
+
+.bg-verde .calendario li:nth-child(even) {
+  background-color: #3b9691; }
+
+.edm .nombre_escenario:after {
+  background-image: url("../img/icono_edm.png"); }
+
+.rock .nombre_escenario:after {
+  background-image: url("../img/icono_rock.png"); }
+
+.bg-amarillo {
+  background-color: #fef46d; }
+
+.bg-verde {
+  background-color: #4cb8b3; }
