@@ -359,6 +359,9 @@ h3 {
     @media (max-width: 768px) {
       .header h1 {
         margin-bottom: 2rem; } }
+  .header.fijo {
+    position: fixed;
+    width: 100%; }
 
 .navegacion-principal a {
   color: #ffffff;
@@ -487,7 +490,8 @@ h4, h3, .dia {
   background-color: #4cb8b3; }
 
 .titulo_galeria {
-  color: #000000; }
+  color: #000000;
+  padding: 2rem; }
 
 .galeria-imagenes {
   padding: 0;
@@ -525,3 +529,56 @@ h4, h3, .dia {
 
 .scroll {
   overflow: hidden; }
+
+.titulo_boletos {
+  text-align: center;
+  color: #ffffff;
+  padding: 5rem;
+  font-weight: 900; }
+
+.boletos {
+  background-color: #4cb8b3;
+  padding-bottom: 5rem; }
+
+.contenedor-pases {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5rem; }
+
+.titulo_pase {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700; }
+
+.pase {
+  width: 100%;
+  border-spacing: 0; }
+  .pase thead {
+    background-color: #f53756; }
+  .pase th {
+    padding: 1.25rem;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 2rem; }
+
+tbody {
+  background-color: #ffffff; }
+  tbody td {
+    padding: 1.25rem;
+    border-bottom: 1px solid #e1e1e1; }
+
+tfoot td {
+  padding: 1.25rem;
+  background-color: #752f97;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center; }
+
+.footer {
+  background-color: #f53756;
+  text-align: center;
+  padding: 1rem; }
+  .footer p {
+    color: #ffffff;
+    margin: 0; }

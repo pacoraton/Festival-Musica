@@ -1,0 +1,65 @@
+.titulo_boletos{
+    text-align: center;
+    color: $blanco; 
+  
+    padding: 5rem;
+    font-weight: 900;
+
+}
+
+.boletos{
+    background-color: $verde;
+    padding-bottom:$separacion ;
+}
+
+
+.contenedor-pases{
+ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $separacion;
+
+}
+
+.titulo_pase{
+    text-align: center;
+    color: $blanco;
+    font-weight:$bold;
+}
+
+.pase{
+    width: 100%;
+    border-spacing:0 ;
+    thead{
+        background-color: $rosa;
+    }
+    th{
+        padding: $separacion/4;
+        color: $blanco;
+        font-weight: $normal;
+        font-size: 2rem;
+    
+    }
+}
+
+tbody{
+    background-color: $blanco;
+
+    td{
+        padding: $separacion/4;
+        border-bottom: 1px solid #e1e1e1;
+        
+    }
+}
+
+
+tfoot{
+    td{
+        padding: $separacion/4;
+        background-color:$morado;
+        color: $blanco;
+        font-weight: $bold;
+        font-size: 3rem;
+        text-align: center;
+    }
+}
