@@ -1,0 +1,49 @@
+
+.titulo_galeria{
+    color:$negro;
+}
+.galeria-imagenes{
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 1rem;
+    @include tablet {
+        grid-template-columns: repeat(4,1fr);
+    }
+    @include telefono{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+.overlay{
+    
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color:rgba($color: #0000, $alpha: 0.5);
+    display: grid;
+    place-items: center;
+    
+
+     img{
+         max-width: 50%;
+     }
+}
+
+.btn-cerrar{
+   font-size: 2rem;
+   padding: 1rem;
+   font-weight: $bold;
+   display: grid;
+   place-items: center;
+   background-color:white;
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+.scroll{
+    overflow: hidden;
+}

@@ -485,3 +485,43 @@ h4, h3, .dia {
 
 .bg-verde {
   background-color: #4cb8b3; }
+
+.titulo_galeria {
+  color: #000000; }
+
+.galeria-imagenes {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem; }
+  @media (max-width: 768px) {
+    .galeria-imagenes {
+      grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 560px) {
+    .galeria-imagenes {
+      grid-template-columns: repeat(2, 1fr); } }
+
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center; }
+  .overlay img {
+    max-width: 50%; }
+
+.btn-cerrar {
+  font-size: 2rem;
+  padding: 1rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer; }
+
+.scroll {
+  overflow: hidden; }
