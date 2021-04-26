@@ -7,30 +7,56 @@ const imagenwebp= require('gulp-webp');
 const concat = require('gulp-concat');
 
 
+//Utilidades Css
+const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss');
+const cssnano= require ('cssnano');
+const sourcemaps =require('gulp-sourcemaps');
+
+
+//Utilidades JavaScript
+const terser =require('gulp-terser');
+const rename = require('gulp-rename');
+
+
+
+const paths= {
+    imagenes:'src/img/**/*',
+    scss:'src/scss/**/*.scss',
+    js:'src/js/**/*.js'
+}
+
+
+
 //Funcion que compila sass
 
     function css(){
-        return src('src/scss/layout/app.scss')
+        return src(paths.scss)
+                    .pipe(sourcemaps.init())
                     .pipe(sass())
+                    .pipe(postcss([autoprefixer(), cssnano()]))
+                    .pipe(sourcemaps.write('.'))
                     .pipe(dest('./build/css'));
     }
 
+    /*
+
     function minificarcss(){
-        return src('/src/scss/layout/app.scss')
+        return src(paths.scss)
                 .pipe(sass({
                     outputStyle:'compressed'
                 }))
                 .pipe(dest("./build/css"));
     }
-
+*/
     function watchfile(){
-        watch('src/scss/**/*.scss',css);// * = La carpeta actual ------ ** = Todos los archivos con esa extensión
-        watch('src/js/**/*.js',javascript);
+        watch(paths.scss, css);// * = La carpeta actual ------ ** = Todos los archivos con esa extensión
+        watch(paths.js, javascript);
     }
 
     //disminuir image 
     function imagenes(){
-        return src('src/img/**/*')
+        return src(paths.imagenes)
                 .pipe(imagemin())
                 .pipe(dest('./build/img'))
                 .pipe(notificacion({message:'Imagen Minificada'}));
@@ -39,7 +65,7 @@ const concat = require('gulp-concat');
 
     //Convertir imagenes a webp
     function Convertirwebp(){
-        return src('src/img/**/*')
+        return src(paths.imagenes)
                .pipe(imagenwebp())
                .pipe(dest('./build/img'))
     }
@@ -47,13 +73,17 @@ const concat = require('gulp-concat');
 
     //Javascript
     function javascript(){
-        return src('src/js/**/*')
+        return src(paths.js)
+        .pipe(sourcemaps.init())
         .pipe(concat('bundle.js'))
+        .pipe(terser())
+        .pipe(sourcemaps.write('.'))
+        .pipe(rename({suffix:'.min'}))
         .pipe(dest('build/js'))
     }
 
 exports.css=css;
-exports.minificarcss=minificarcss;
+//exports.minificarcss=minificarcss;
 exports.watchfile=watchfile;
 exports.imagenes=imagenes;
 exports.Convertirwebp=Convertirwebp;
